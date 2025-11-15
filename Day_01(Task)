@@ -1,0 +1,28 @@
+#WAP to print your name 10 times in python.
+print("-------Method 1-------")
+# Simpleway for biginners!
+print("KajalRastogi")
+print("KajalRastogi")
+print("KajalRastogi")
+print("KajalRastogi")
+print("KajalRastogi")
+print("KajalRastogi")
+print("KajalRastogi")
+print("KajalRastogi")
+print("KajalRastogi")
+print("KajalRastogi")
+
+print("-------Method 2-------")
+# Another way to do this task is by * using this operator.
+print("KajalRastogi\n" * 10)
+
+print("-------Method 3-------")
+# using a loop.
+name =input("Enter your name: ")
+for i in range(10):
+    print(f"Your Name is: {name}")
+
+# TryMore Method To Do This Task by Yourself!
+print("-------Thank you -------")
+
+
