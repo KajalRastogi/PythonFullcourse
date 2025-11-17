@@ -1,0 +1,18 @@
+Theory Question:
+what are Data Type in python.List any 4 with example.
+what is the difference between implicit and explicit type conversion? give one example of each.
+what are operators in python? Explain any three types with examples.
+
+coding question:
+1. Smart Temperature Converter
+   Take input in celcius and print its equivalent in fahrenheit and kelvin.
+  (use explicit type conversion and arthmetic operators.)
+  formula: Fahrenheit = (c*9/5)=32 , kelvin = c+273.15
+
+2. Bill Split Calculator
+   WAP that takes total bill amount and numbers of friends as input.
+   Calculate how much each person will pay.
+   (also print the data type of each variable used)
+   hint use float() and division operator.
+
+Output Question:
