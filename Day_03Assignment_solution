@@ -1,0 +1,17 @@
+Smart Temperature Converter:
+Celcius = float(input("Enter your value:"))
+Fahrenheit = (Celcius* 9/5)+32
+print("fahrenheit is equivalent to :", Fahrenheit)
+kelvin = Celcius +273.15
+print("kelvin is equivalent:",kelvin)
+
+Bill Split Calculator:
+total_bill= float(input("Enter your amount:"))
+num_frnds = int(input("Enter no. of frnds:"))
+
+each_persn = total_bill / num_frnds
+print("Each persons pay:",each_persn)
+
+print("total bill:",type(total_bill))
+print("num frnds:",type(num_frnds))
+print("each person:",type(each_persn))
