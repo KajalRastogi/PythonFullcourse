@@ -1,0 +1,44 @@
+# Create a dictionary named marks to store marks of 3 subjects.Add the subjects one by one and print the final dictionary.
+
+# marks ={}
+
+# marks["Maths"]=90
+# marks["English"]=90
+# marks["Computer"]=90
+# print(marks)
+
+# You are given a list of programming langusges:
+# ["python","Java","C++","python","Java","C++"]
+# convert it into a set and print how many unique languages Divya knows.
+
+programminglist = ["python","Java","C++","python","Java","C++"]
+programmingset = set(programminglist)
+print("Divya knows  these many languages",len(programmingset))
+
+
+# Create a dictionary sorting meanings of 3 English Words.
+# words = {
+#     "Dawdle" : "To waste time or move slowly",
+#     "Diligent": "Showing steady",
+#     "Eloquent": "Speaking or writing in a fluent",
+# }
+# print(words)
+
+# Create a set of numbers and show union and intersection with another set.
+# Create two sets of numbers
+set1 = {1, 2, 3, 4, 5}
+set2 = {4, 5, 6, 7, 8}
+
+# Union of two sets
+union_result = set1.union(set2)
+
+# Intersection of two sets
+intersection_result = set1.intersection(set2)
+
+# Print results
+print("Set 1:", set1)
+print("Set 2:", set2)
+print("Union:", union_result)
+print("Intersection:", intersection_result)
+
+

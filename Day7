@@ -1,0 +1,42 @@
+# WAPP to print numbers from 1 to 10 using a while loop.
+
+# num = 1
+# while num<=10:
+#     print(num)
+#     num+=1
+# WAPP to print numbers from 10 down to 1 using a while loop.(hint: start from 10 and decrease the counter each time.)
+
+num =10
+while num>=1:
+    print(num)
+    num-=1
+# WAP to print all even numbers between 1 to 50 using a while loop.(hint: use modulus operator% to check for even numbers.)
+
+num = 1
+while num<=50:
+    if num%2==0:
+        print(num)
+    num+=1
+# WAP that prints the sum of first n natural numbers. (hint: keep a running total inside the loop.)
+
+n = int(input("Enter your number:"))
+sum =0
+while n>=1:
+    sum= sum+n
+    n-=1
+print(sum)
+    
+# WAP to print this pattern using a while loop.
+# *
+# **
+# ***
+
+num = 1
+while num<=4:
+    print("*"*num)
+    num+=1
+print(num)
+
+
+
+

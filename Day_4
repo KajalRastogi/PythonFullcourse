@@ -1,0 +1,24 @@
+# WAPP that takes a user's name as input and prints:
+# first character , last character , tha total length of the name .
+
+# name = input("Enter you good name:").lower()
+# print(name[0])
+# print(name[-1])
+# print(len(name))
+
+# WAPP that takes your favorite food name as input and prints:
+# the middle 3 characters , the last 2 characters
+
+name = input("Enter your favorite food name:")
+mid = len(name)//2
+ans= (name[mid-1: mid+2])
+print(ans)
+print(name[-2:])
+
+# WAPP that takes a sentence and prints:
+# total characters(len()) , uppercase version , lowercase version
+
+sentence = input("Enter the sentence:")
+print(len(sentence))
+print(sentence.upper())
+print(sentence.lower())
