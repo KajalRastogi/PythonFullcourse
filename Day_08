@@ -1,0 +1,197 @@
+#Practice question basics to understand python functions 
+
+#simple funtion is calling without arguments and parameters.
+#Write a function named welcome_message() that prints "Welcome to Python Programming!" three times.
+def welcome_message():
+    print("Welcome to Python Programming!")
+welcome_message()
+welcome_message()
+welcome_message()
+
+#Define a function inspire() that prints a motivational quotes with your name.
+def inspire():
+    print("Kajal : When you work hard you can win !")
+inspire()
+
+#Create a function good_morning() that prints "Good Morning, Kajal!". Call it twice.
+def good_morning():
+    print("Good Morning, Kajal!")
+good_morning() # fuction is being called here
+good_morning()
+
+#Why are functions used in programming? write two advantages.
+
+#we use function in programming to reuse the code without write it again and again.
+# Advantages:
+# 1. we use code any time in function directly by write function name only.
+# 2. Code readibality is better in code.
+#(they use to avoid redadency (duplicate))
+
+#Write a function display_python() that prints "Python is Fun!".
+def display_python():
+    print("Python is Fun!")
+display_python()
+
+#Create a function learn() that prints three python topics.
+def learn():
+    print("OPPs,String,Function")
+learn()
+
+#Explain what happens if you call a function before defining it.
+#if you call a function before defining its do not print any thing and gives error (fun(name) is not define ).
+
+
+#function definition with parameters
+def average(a,b):
+    averagevalue = (a+b)/2
+    print(averagevalue)
+
+#function calling with arguments
+average(23,3)
+average(3,4)
+#average() when we run it it gives error now .
+#average() if if need run without arguments then use default values
+def average(a=3,b=23):
+    averagevalue = (a+b)/2
+    print(averagevalue)
+average()
+average(3,4)    
+
+# question
+#Write a function show_age(name, age) that prints: "Kajal Rastogi is 24 year old."
+
+def show_age(name, age):
+    print(f"{name} Rastogi is {age} year old.")
+show_age("Kajal",24)
+
+#Create a function add_numbers(a,b) that prints both the sum and difference.
+
+def add_numbers(a,b):
+    print(f"sum :{a}+{b} ={a+b}")
+    print(f"difference :{a}-{b} ={a-b}")
+add_numbers(3,23)
+
+#write a function fav_food(food) that prints "Kajal loves <food>"
+def fav_food(food):
+    print(f"Kajal loves {food}") 
+fav_food("Dosa")
+
+#return statement:
+def multiply(a=10,b=10):
+    return a*b
+print(multiply()) #we can also directly run it 
+result = multiply()
+print(result)
+
+#Write a function square(num) that returns the square of a number.
+def square(num):
+    return(num*num) #or (num**2)
+print(square(3))
+
+#Write a function that takes a string and return the count of vowels and consonants separately.
+
+def countvowconso(userinput):
+    vowels = "aeiouAEIOU"
+    countvowel =0
+    countconsonants=0
+    for eachchar in userinput:
+        if(eachchar.isaplha()):
+            if(eachchar in vowels):
+                countvowel = countvowel+1
+            else:
+                countconsonants+=1
+
+    return countvowel,  countconsonants
+vowels, consonants = countvowconso("Saumya Singh")
+print(vowels,consonants)
+
+#define a function convert_to_upper(word) that returns the upper version of the string.
+def convert_to_upper(word):
+    return word.upper()
+
+print(convert_to_upper("kajal"))
+
+
+#creat a function full_name(fname,lname) that returns the joined with a space.
+def full_name(fname,lname):
+    print(f"{fname} {lname}")
+
+full_name("Kajal","Rastogi")
+#Define a function message(text ="keep learning!") and call it with and without an argument.
+def message(text ="keep learning!"):
+    return text
+print(message())
+
+print( message("keep learning python!"))
+#Create a function login(username,password ="1234") that prints the credentials.
+
+def login(username,password ="1234"):
+       print(f"Username: {username}, Password: {password}")
+print("Kajal")
+login("kajal","abcd")
+
+#WAP with a local variable score inside a function and a global one outside.
+score = 3
+def fun():
+    score = 23
+    print("local var:",score)
+fun()
+print("global var:",score)
+
+#Create a program using global Keyboard to modify a variable from inside a function.
+cnt = 0
+def update_cnt():
+    global cnt     # declare that we want to use and modify the global variable.
+    cnt = cnt+1
+    print("Inside function, cnt=",cnt)
+
+update_cnt()
+update_cnt()
+update_cnt()
+
+print("Outside function, final count =", cnt)
+    
+#Explain the difference b/w local and global scope in your words.
+#ans
+# local var = its run inside the fun 
+# global var = its run outside the fun
+
+
+#Question:
+#Write a function that prints a local variable and a global variable.
+x=10
+def show():
+    x=3
+    print("inside fun:",x)
+show()
+print("outside fun:",x)
+
+#Write a program where a global counter increases each time a function is called.
+cnt = 0 
+def show():
+    global cnt
+    cnt = cnt+1
+    print("global:",cnt)
+show()
+show()
+show()
+print("outside:",cnt)
+
+#Write a program where a function tries to change a variable without global and show that it doesn’t work.
+x=3 #global var
+def fun_change_x():
+    x=4
+    print("inside",x)
+fun_change_x()
+print("Outside", x)
+
+#function uses a local variable to update a global variable (using global keyword).
+x=3
+def update_x():
+    global x
+    local_val = 4
+    x= local_val
+update_x()
+print("updated global:",x)
+
+
