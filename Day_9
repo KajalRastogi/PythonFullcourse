@@ -1,0 +1,91 @@
+file = open("File_handling.txt","r")
+data = file.read()
+
+print("Data of the file is:",data)
+
+#quesion for opening a file 
+#write code to open a file named mydata.txt in read mode. 
+myfile = open("mydata.txt","r")
+mydata = myfile.read()
+print("Data of mydata.txt file is:",mydata)
+
+#WAP to read a text from a given file certificate.txt and whether it contains the word live.
+file = open("certificate.txt","r")
+content = file.read()
+if "live" in content:
+    print("The word 'live' is present in the file.")
+else:
+    print("The word 'live' is not present in the file.")
+file.close()
+
+#what happens if you open a non-existing file in "r" mode?
+
+#If you try to open a non-existing file in "r" mode, Python will raise a FileNotFoundError.
+
+#open a file called report.txt in write mode.
+report_file = open("report.txt", "w")
+
+#Create a file named Kajal_info.txt using "X" mode
+kajal_file = open("Kajal_info.txt", "x")
+
+#WAP to safely check whether a file exits before opening it .
+import os
+filename = "data.txt"   # Change to your file name
+
+# Check if file exists
+if os.path.exists(filename):
+    print("File found! Opening the file...")
+    with open(filename, "r") as file:
+        content = file.read()
+        print("File Content:")
+        print(content)
+else:
+    print("Error: File does not exist!")
+file.close()
+
+with open("report.txt","r") as f: # where we use with keyword for automatically close the file we don't need to write extra line of code for closing file.
+    data = f.read()
+    print("file data",data)
+
+#based on readlines() and readline() mrthod read a file line by line.
+
+#read a file named story.txt and print the full content.
+with open("story.txt","r") as R:
+    content = R.readlines()
+    print("Full content is read:",content)
+
+#read only the first line of bio.txt.
+with open("bio.txt","r") as b:
+    biodata = b.readline()
+    print("data:",biodata)
+
+#print how many lines are present in notes.txt.
+with open("notes.txt","r") as n:
+    note = n.readlines()
+    print("Lines in notes.txt:",note)
+    print("Number of lines in notes.txt:",len(note))
+
+#test by self:
+#Write your name and class into a file named intro.txt.
+with open("intro.txt","w") as intro:
+    intro.write("Name: kajal \n class: 12th passout")
+    print("intro.txt file created successfully.")
+
+#create a flie goals.txt and write your three goals for this month.
+with open("goals.txt","w") as goals:
+    goals.write("1. Learn Python programming.\n2. Read 3 books.\n3. Exercise regularly.")
+    print("goals.txt file created successfully.")
+#append "completed" to an exxisting file status.txt.
+with open("status.txt","a") as status:
+    status.write("\ncompleted")
+    print("Appended 'completed' to status.txt successfully.")
+
+#use with to read the entire content of info.txt.
+with open("info.txt","r") as info:
+    data = info.read()
+    print("Content of info.txt:",data)
+#use with to write "Hello World!" in hello.txt.
+with open("hello.txt","w") as hello:
+    hello.write("Hello World!")
+    print("Wrote 'Hello World!' to hello.txt successfully.")
+

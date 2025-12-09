@@ -1,0 +1,2 @@
+Name: kajal 
+ class: 12th passout

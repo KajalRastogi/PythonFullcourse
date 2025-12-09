@@ -1,0 +1,56 @@
+#Automating File Tasks (copy,Rename,Delete)
+# Copy file
+# import shutil
+# shutil.copy("demo.txt","backup_demo.txt")
+
+
+# Rename file
+# import os
+# os.rename("demo.txt","backup_demo.txt")
+
+# Delete file
+# import os
+# os.remove("oldfile.txt")
+
+#copy notes.txt to notes_backup.txt.
+#rename temp.txt to final.txt.
+#ask user for a file name and copy it to a backup folder.
+
+#Real-life Mini Example : Kajal's Daily Log App
+#some office laptops have such scripts in the background when user logs in.
+import datetime
+with open("mylog.txt","a") as f:
+    f.write(f"kajal logged in at: {datetime.datetime.now()}\n")
+
+#every time the program runs, a new log entry is added.
+
+#qustion:
+#Word counter App: count how many words are present in the file notes.txt
+with open("notes.txt","r") as f:
+    content = f.read()
+    words = content.split()
+    word_count = len(words)
+    print("Total number of words in notes.txt:", word_count)
+
+#Log appender: append the current date and time to a file log.txt whenever the program runs.
+from datetime import datetime
+with open("log.txt", "a") as f:
+    f.write(f"Program run at: {datetime.now()}\n")
+
+#if file does not exist, so we use try or except
+import os
+try:
+    with open("me.txt","r") as m:
+        data = m.read()
+        print("File content:",data)
+except FileNotFoundError:
+    print("Error: File does not exist!")
+
+ #or we use without try except
+import os
+with open("me.txt","r") as m:
+        data = m.read()
+        print("File content:",data)
+
+
+
